@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2, h3 {
+    margin: 10px 0;
+}
+
+.add_task {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.pinned-tasks, .all-tasks {
+    margin-bottom: 15px;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #000;
+    border-radius: 20px;
+}
+
+.task button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.pinned button {
+    font-size: 16px;
+    transform: rotate(90deg);
+}
+
+.no-pinned {
+  text-align: center;
+}
+
+/* Модальное окно (фон) */
+.modal {
+  display: none; /* По умолчанию скрыто */
+  position: fixed;
+  z-index: 1; /* Находится поверх всего */
+  left: 0;
+  top: 0;
+  width: 100%; /* Полная ширина */
+  height: 100%; /* Полная высота */
+  overflow: auto; /* Включить прокрутку, если необходимо */
+  background-color: rgba(0, 0, 0, 0.4); /* Черный цвет с прозрачностью */
+}
+
+/* Содержимое модального окна */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% от верха и по центру */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Может быть больше или меньше, в зависимости от размера экрана */
+  max-width: 400px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Кнопка закрытия */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
